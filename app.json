@@ -40,7 +40,7 @@
         "DATABASE_URL_PRIMARY": {
             "description": "Will be used as the database URL. If not given, Heroku database will be used instead.",
             "value": "postgres://lcaavsii:O49zZxbRCi-GDwggo0LWtP3dE0AOtewy@rosie.db.elephantsql.com/lcaavsii",
-            "required": true
+            "required": false
         }
     },
     "formation": {
