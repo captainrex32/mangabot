@@ -1,17 +1,8 @@
 {
-    "name": "MANGABOT",
-    "description": "Read manga from your favourites websites on telegram.",
-    "keywords": [
-        "manga",
-        "pyrogram",
-        "pdf",
-        "telegram",
-        "bot"
-    ],
-    "stack": "container",
-    "repository": "https://github.com/Dra-Sama/mangabot",
-    "success_url": "/welcome",
-    "env": {
+  "name": "mangabot", 
+  "description": "A Telegram bot that helps users zip and upload files.",
+  "repository": "https://github.com/captainrex32/mangabot", 
+      "env": {
         "API_ID": {
             "description": "Get this value from https://my.telegram.org/apps",
             "value": "13986700",
@@ -42,17 +33,13 @@
             "value":  "postgres://lcaavsii:O49zZxbRCi-GDwggo0LWtP3dE0AOtewy@rosie.db.elephantsql.com/lcaavsii"
             "required": true
         }
-    },
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "Eco"
-        }
-        },
-    "image": "heroku/python",
-    "addons": [
-        {
-        "plan": "heroku-postgresql"
-        }
-    ]
+  "formation": {
+    "worker": { 
+      "quantity": 1,
+      "size": "basic" 
+    } 
+  },
+  "buildpacks": [ 
+    { "url": "heroku/python" } 
+  ]
 }
