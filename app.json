@@ -1,45 +1,58 @@
 {
-  "name": "mangabot", 
-  "description": "A Telegram bot that helps users zip and upload files.",
-  "repository": "https://github.com/captainrex32/mangabot", 
-      "env": {
+    "name": "MANGABOT",
+    "description": "Read manga from your favourites websites on telegram.",
+    "keywords": [
+        "manga",
+        "pyrogram",
+        "pdf",
+        "telegram",
+        "bot"
+    ],
+    "stack": "container",
+    "repository": "https://github.com/Dra-Sama/mangabot",
+    "success_url": "/welcome",
+    "env": {
         "API_ID": {
             "description": "Get this value from https://my.telegram.org/apps",
-            "value": "",
+            "value": "13986700",
             "required": true
         },
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org/apps",
-            "value": "",
+            "value": "95d2e8a1aa81fc9b7fa8a8aeafe59537",
             "required": true
         },
         "BOT_TOKEN": {
             "description": "Get this value from @BotFather in telegram",
-            "value":  ""
+            "value":  "5571587428:AAGqT50otoSffxEqlKrrIPX7k6XTWx3lB14"
             "required": true
         },
         "CACHE_CHANNEL" : {
             "description": "Channel that will be used to only ask for a chapter once",
-            "value":  ""
+            "value":  "Shanks_Bot_LOGS"
             "required": true
         },
         "CHANNEL": {
             "description": "Channel that users must be subscribed in order to use the bot.",
-            "value":  ""
+            "value":  "Wizard_Bots"
             "required": false
         },
         "DATABASE_URL_PRIMARY": {
             "description": "Will be used as database url. If not given heroku database will be used instead.",
-            "value":  ""
+            "value":  "postgres://lcaavsii:O49zZxbRCi-GDwggo0LWtP3dE0AOtewy@rosie.db.elephantsql.com/lcaavsii"
             "required": true
         }
-  "formation": {
-    "worker": { 
-      "quantity": 1,
-      "size": "eco" 
-    } 
-  },
-  "buildpacks": [ 
-    { "url": "heroku/python" } 
-  ]
+    },
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "Eco"
+        }
+        },
+    "image": "heroku/python",
+    "addons": [
+        {
+        "plan": "heroku-postgresql"
+        }
+    ]
 }
